@@ -8,3 +8,14 @@
     color:green;
     background-color: aquamarine;
 }
+
+.c-header
+{
+    font-size: 150px;
+}
+.c-btn
+{
+    background: linear-gradient(45deg, #2bd231, #001f03);
+    border: none;
+    padding: 8px 50px;
+}
