@@ -8,6 +8,9 @@ import Myloginpage from './modules/auth/Myloginpage';
 import Myregistorpage from './modules/auth/Myregistorpage';
 import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myerror from './modules/shares/Myerror';
+import Myhomepage from './modules/dashboard/Myhomepage';
+import Contactpage from './modules/dashboard/pages/Contactpage';
+import Servicepage from './modules/dashboard/pages/Servicepage';
 
 
 
@@ -18,7 +21,13 @@ root.render(
         <Routes>
           <Route path='' element={<Myloginpage/>}></Route>
           <Route path='registor' element={<Myregistorpage/>}></Route>
-          <Route path='dashboard' element={<Mylandingpage/>}></Route>
+          <Route path='dashboard' element={<Mylandingpage/>}>
+            <Route path='' element={<Myhomepage/>}/>
+            <Route path='contact' element={<Contactpage/>}/>
+            <Route path='service' element={<Servicepage/>}/>
+            <Route path='*' element={<Myerror/>}></Route>
+          
+          </Route>
           <Route path='*' element={<Myerror/>}></Route>
 
 

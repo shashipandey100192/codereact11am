@@ -1,4 +1,4 @@
-const users=[
+export const users=[
     {
         sno:1,
         name:"kumar",
@@ -118,6 +118,19 @@ const users=[
     },
     {
         sno:10,
+        name:"kumar",
+        dob:"10/05/2002",
+        email:"kumar@gmail.com",
+        phone:"5487487848",
+        adddress:"new delhi",
+        course:"mern full stack",
+        gender:"male",
+        education:"12th",
+        joiningdate:"01/01/2021",
+        salary:5700
+    },
+    {
+        sno:11,
         name:"kumar",
         dob:"10/05/2002",
         email:"kumar@gmail.com",

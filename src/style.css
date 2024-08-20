@@ -73,8 +73,9 @@
   }
   .page
   {
-    height: 90vh;
+    min-height: 90vh;
     border:1px solid red;
+    max-height: fit-content;
   }
   .c-float
   {

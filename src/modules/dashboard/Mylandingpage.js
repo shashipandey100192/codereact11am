@@ -1,7 +1,8 @@
 import React from 'react'
 import Mysidebar from '../shares/Mysidebar'
 import Mynavbar from '../shares/Mynavbar'
-import Myhomepage from './Myhomepage'
+import { Outlet } from 'react-router-dom'
+
 
 function Mylandingpage() {
   return (
@@ -13,7 +14,7 @@ function Mylandingpage() {
       <div className='col-md-10 g-0'>
        <Mynavbar/>
         <div className='page'>
-          <Myhomepage/>
+          <Outlet></Outlet>
 
         </div>
 
