@@ -11,6 +11,8 @@ import Myerror from './modules/shares/Myerror';
 import Myhomepage from './modules/dashboard/Myhomepage';
 import Contactpage from './modules/dashboard/pages/Contactpage';
 import Servicepage from './modules/dashboard/pages/Servicepage';
+import Myaxiospage from './modules/dashboard/pages/Myaxiospage';
+import Detailspage from './modules/dashboard/pages/Detailspage';
 
 
 
@@ -25,6 +27,9 @@ root.render(
             <Route path='' element={<Myhomepage/>}/>
             <Route path='contact' element={<Contactpage/>}/>
             <Route path='service' element={<Servicepage/>}/>
+            <Route path='myaxios' element={<Myaxiospage/>}/>
+            <Route path='myaxios/detailspage/:id' element={<Detailspage/>}/>
+              
             <Route path='*' element={<Myerror/>}></Route>
           
           </Route>

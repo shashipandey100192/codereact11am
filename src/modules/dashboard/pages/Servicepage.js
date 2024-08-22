@@ -7,7 +7,7 @@ function Servicepage() {
 
   const mygetdata = () => {
     fetch("https://jsonplaceholder.typicode.com/posts").then((d) => {
-      // console.log(d.json());
+      console.log(d);
       return d.json();
     }).then((mydata) => {
       console.log(mydata);
