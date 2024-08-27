@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Myloginpage() {
     return (
@@ -27,6 +28,7 @@ function Myloginpage() {
                             <div className='col-12 text-center'>
                                 <div class="mb-3">
                                    <button className='btn btn-success c-btn'>login</button>
+                                   <Link to="registor" className="btn">new user</Link>
                                 </div>
                             </div>
                         </div>
