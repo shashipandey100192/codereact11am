@@ -13,6 +13,8 @@ import Contactpage from './modules/dashboard/pages/Contactpage';
 import Servicepage from './modules/dashboard/pages/Servicepage';
 import Myaxiospage from './modules/dashboard/pages/Myaxiospage';
 import Detailspage from './modules/dashboard/pages/Detailspage';
+import Parentpage from './modules/dashboard/pages/Parentpage';
+import Chartspage from './modules/dashboard/pages/Chartspage';
 
 
 
@@ -28,6 +30,8 @@ root.render(
             <Route path='contact' element={<Contactpage/>}/>
             <Route path='service' element={<Servicepage/>}/>
             <Route path='myaxios' element={<Myaxiospage/>}/>
+            <Route path='myprops' element={<Parentpage/>}/>
+            <Route path='mygraph' element={<Chartspage/>}/>
             <Route path='myaxios/detailspage/:id' element={<Detailspage/>}/>
               
             <Route path='*' element={<Myerror/>}></Route>

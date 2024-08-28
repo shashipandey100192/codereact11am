@@ -18,6 +18,8 @@ function Mysidebar() {
             <li><Link to="service" className="link-body-emphasis d-inline-flex text-decoration-none rounded">fetch</Link></li>
             <li><Link to="contact" className="link-body-emphasis d-inline-flex text-decoration-none rounded">condition return</Link></li>
             <li><Link to="myaxios" className="link-body-emphasis d-inline-flex text-decoration-none rounded">axios</Link></li>
+            <li><Link to="myprops" className="link-body-emphasis d-inline-flex text-decoration-none rounded">props</Link></li>
+            <li><Link to="mygraph" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Graphs</Link></li>
           </ul>
         </div>
       </li>
