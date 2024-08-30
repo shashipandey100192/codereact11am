@@ -81,3 +81,12 @@
   {
     float:right !important;
   }
+  .myload
+  {
+    background-color: rgb(234, 133, 133);
+    color:red;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 100px;
+
+  }

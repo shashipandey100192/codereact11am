@@ -1,6 +1,8 @@
 import React from 'react'
+import Myclasspage from './Myclasspage'
 
 function Subchildpage(props) {
+    const myred = "red";
   return (
     <div className='p-3 bg-primary'>
             <h2>Subchildpage</h2>
@@ -26,6 +28,8 @@ function Subchildpage(props) {
                 )
             })}
             </select>
+
+            <Myclasspage mycolor={myred}></Myclasspage>
         
         </div>
   )

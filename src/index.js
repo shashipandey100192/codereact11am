@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./style.css";
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+
+
 import Myloginpage from './modules/auth/Myloginpage';
 import Myregistorpage from './modules/auth/Myregistorpage';
 import Mylandingpage from './modules/dashboard/Mylandingpage';
@@ -15,34 +18,43 @@ import Myaxiospage from './modules/dashboard/pages/Myaxiospage';
 import Detailspage from './modules/dashboard/pages/Detailspage';
 import Parentpage from './modules/dashboard/pages/Parentpage';
 import Chartspage from './modules/dashboard/pages/Chartspage';
-
+import Featurespage from './modules/dashboard/pages/Featurespage';
+// import Myloader from './Myloader';
+// import Lazypage from './modules/dashboard/pages/Lazypage';
+const Myloader = lazy(()=>import('./Myloader'));
+const Lazypage = lazy(() => import('./modules/dashboard/pages/Lazypage'));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
-        <Routes>
-          <Route path='' element={<Myloginpage/>}></Route>
-          <Route path='registor' element={<Myregistorpage/>}></Route>
-          <Route path='dashboard' element={<Mylandingpage/>}>
-            <Route path='' element={<Myhomepage/>}/>
-            <Route path='contact' element={<Contactpage/>}/>
-            <Route path='service' element={<Servicepage/>}/>
-            <Route path='myaxios' element={<Myaxiospage/>}/>
-            <Route path='myprops' element={<Parentpage/>}/>
-            <Route path='mygraph' element={<Chartspage/>}/>
-            <Route path='myaxios/detailspage/:id' element={<Detailspage/>}/>
-              
-            <Route path='*' element={<Myerror/>}></Route>
-          
-          </Route>
-          <Route path='*' element={<Myerror/>}></Route>
+    <BrowserRouter>
+      <Routes>
+        <Route path='' element={<Myloginpage />}></Route>
+        <Route path='registor' element={<Myregistorpage />}></Route>
+        <Route path='dashboard' element={<Mylandingpage />}>
+          <Route path='' element={<Myhomepage />} />
+          <Route path='contact' element={<Contactpage />} />
+          <Route path='service' element={<Servicepage />} />
+          <Route path='myaxios' element={<Myaxiospage />} />
+          <Route path='myprops' element={<Parentpage />} />
+          <Route path='mygraph' element={<Chartspage />} />
+          <Route path='myaxios/detailspage/:id' element={<Detailspage />} />
+          <Route path='mylazy' element={<Suspense fallback={<Myloader/>}>
+            <Lazypage />
+
+          </Suspense>}></Route>
+          <Route path='myreature' element={<Featurespage/>}/>
+
+          <Route path='*' element={<Myerror />}></Route>
+
+        </Route>
+        <Route path='*' element={<Myerror />}></Route>
 
 
-        </Routes>
-      </BrowserRouter>
-   
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 

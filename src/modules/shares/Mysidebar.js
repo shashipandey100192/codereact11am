@@ -20,6 +20,8 @@ function Mysidebar() {
             <li><Link to="myaxios" className="link-body-emphasis d-inline-flex text-decoration-none rounded">axios</Link></li>
             <li><Link to="myprops" className="link-body-emphasis d-inline-flex text-decoration-none rounded">props</Link></li>
             <li><Link to="mygraph" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Graphs</Link></li>
+            <li><Link to="mylazy" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Lazyloading</Link></li>
+            <li><Link to="myreature" className="link-body-emphasis d-inline-flex text-decoration-none rounded">features</Link></li>
           </ul>
         </div>
       </li>
